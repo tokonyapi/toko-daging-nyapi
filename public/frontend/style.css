@@ -1,0 +1,14 @@
+.nav-link {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.active{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(192, 34, 34) !important;
+}
+
+.nav-link:hover{
+    color: rgb(192, 34, 34);
+}
