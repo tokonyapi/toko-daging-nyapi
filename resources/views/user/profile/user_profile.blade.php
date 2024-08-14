@@ -46,7 +46,9 @@
                 <div class="col-md-6 col-sm-12 ">
                     <form method="POST" class="card-body cardbody-color p-lg-5" action="{{ route('user.profile.update') }}">
             @csrf
-    
+            @if(session('error'))
+            <p style="color:red">{{ session('error') }}</p>
+        @endif
 
                 <div class="mb-3">
                   <label for="name" class="form-label fw-bold">Nama</label>
@@ -57,6 +59,11 @@
                   <label for="email" class="form-label fw-bold">Email</label>
                   <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
                     placeholder="Masukan Email" name="email" value="{{ $user->email }}">
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label fw-bold">Address</label>
+                  <input type="text" class="form-control" id="address" 
+                    placeholder="Masukan address" name="address" value="{{ $user->address }}">
                 </div>
                 {{-- <div class="text-end">
                     <a href="{{ route('password.request') }}" class="text-dark">Forgot Password?</a>

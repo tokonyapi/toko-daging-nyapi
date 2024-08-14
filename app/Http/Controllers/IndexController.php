@@ -36,6 +36,7 @@ class IndexController extends Controller
         $data = User::find(Auth::user()->id);
         $data->name = $request->name;
         $data->email = $request->email;
+        $data->address = $request->input('address');
 
         $data->save();
         return redirect()->route('dashboard');

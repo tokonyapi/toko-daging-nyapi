@@ -34,6 +34,7 @@
                                                     <th>Total</th>
                                                     <th>Status</th>
                                                     <th>Tanggal</th>
+                                                    <th>Alamat</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -46,6 +47,7 @@
                                                         <td>Rp{{ number_format($transaction->quantity * $transaction->product->price, 0, ',', '.') }}</td>
                                                         <td>{{ $transaction->status }}</td>
                                                         <td>{{ $transaction->updated_at->format('d-m-Y') }}</td>
+                                                        <td>{{ $user->address }}</td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>

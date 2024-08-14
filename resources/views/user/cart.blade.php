@@ -72,10 +72,21 @@
                             </li>
                         @endforeach
                     </ul>
+                    <div class="d-flex justify-content-between">
+                        @if ($defaultOngkir > 0)
+                        <p class="mb-2">Ongkir:</p>
+                        <p>Rp. {{ number_format($defaultOngkir, 0, ',', '.') }}</p>
+
+                        @else
+                        <p class="mb-2">Ongkir:</p>
+                        <p>Rp. 0</p>
+                        @endif
+                    </div>
                         <div class="d-flex justify-content-between">
                             <p class="mb-2">Total price:</p>
-                            <p class="mb-2">Rp{{ number_format($totalPrice, 0, ',', '.') }}</p>
+                            <p class="mb-2">Rp. {{ number_format($totalPrice, 0, ',', '.') }}</p>
                         </div>
+
 
                         <div class="mt-3">
                             <button class="btn btn-warning text-white w-100 my-auto" id="pay-button">

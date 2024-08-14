@@ -63,7 +63,7 @@
             </li>
           </ul>
 
-            <a href="cart.html"
+            <a href="{{ route('user.cart') }}"
               ><button class="btn btn-outline-dark" type="submit">
                 <i class="bi-cart-fill"></i>
                 <!-- Cart
@@ -71,10 +71,17 @@
               </button></a
             >
 
-          <a href="cart.html"
-            ><button class="btn btn-outline-dark mx-2">
-              <i class="bi bi-person-fill"></i></button
-          ></a>
+            @auth
+            <a href="{{ route('dashboard') }}"
+              ><button class="btn btn-outline-dark mx-2">
+                <i class="bi bi-person-fill"></i>{{ Auth::user()->name }}</button
+            ></a>
+            @else
+              <a href="{{ route('login') }}"
+              ><button class="btn btn-outline-dark mx-2">
+                <i class="bi bi-person-fill"></i></button
+            ></a>
+            @endauth
         </div>
       </div>
     </nav>

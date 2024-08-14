@@ -62,6 +62,9 @@
                             <p class="text-secondary mb-1 mt-2">
                               {{ Auth::user()->email }}
                             </p>
+                            <p class="text-secondary mb-1 mt-2">
+                              {{ Auth::user()->address }}
+                            </p>
                           </div>
                           <div class="row">
                           <div class="col-sm-12 mt-3">
