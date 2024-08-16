@@ -4,7 +4,7 @@
 
         <div class="user-profile">
 			<div class="ulogo">
-				 <a href="index.html">
+				 <a href="{{ route('admin.dashboard') }}">
 				  <!-- logo for regular state and mobile devices -->
 					 <div class="d-flex align-items-center justify-content-center">
 						  {{-- <img src="{{ asset('assets/logo3.png') }}" width="70" alt=""> --}}
