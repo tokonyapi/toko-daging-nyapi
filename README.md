@@ -1,62 +1,123 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1 align="center" style="font-size: 30px">Website Toko Daging Nyapi - Laravel</h1>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Documentation
 
-## About Laravel
+<img src="public/assets/admin.png" alt="Admin" style="border: 1px solid black;"/>
+<img src="public/assets/user.png" alt="User" style="border: 1px solid black;"/>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## About
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This project is the creation of a Nyapi meat shop website. This project is a web application developed using Laravel. This website has 2 different pages, namely the User page and the Administrator page. Users can access information about available products, as well as the latest news. Administrators can manage every information content presented on the website. There is information about transaction data made by users on the admin dashboard page.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Server Requirements
 
-## Learning Laravel
+- PHP version 7.2 or newer is recommended.
+- MySQL
+- Laravel
+- Composer
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Available Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-  User Page
+    -  Beranda
+         -  Tampilan beberapa Product
+         -  Tampilan beberapa Berita
+    -  About
+        -  Tentang Nyapi Store Page
+    -  Berita Page
+        -  Semua Berita yang tersedia
+        -  Detail Berita Page
+    -  Product Page
+        -  Semua Product yang tersedia
+        -  Detail Product Page
+    -  Login Page
+        -  Halaman login user
+    -  Cart
+        -  Tampilan product setelah dimasukan cart
+        -  Checkout
+-  Add Admin Panel
+    -  Login Page
+    -  Dashboard Page
+    -  Manage All Transaction 
+    -  Manage Berita Page
+    -  Manage Product Page
+-  Add Databases
+-  Add Routes
+-  Add Models
+-  Add Controllers
+-  Add Views
+-  Add Authentication & Multi Roles
+-  Add CRUD Function
+-  Add Responsive Design
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Getting Started
 
-### Premium Partners
+Follow the instruction below to install the project locally.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+## Installation
 
-## Contributing
+Follow the steps below for installation of this project.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. *Clone Repositori*
 
-## Code of Conduct
+   bash
+   git clone https://github.com/tokonyapi/toko-daging-nyapi.git
+   cd toko-daging-nyapi
+2. **Instal Dependensi PHP**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    Jalankan perintah berikut untuk menginstal semua dependensi PHP menggunakan Composer:
+    
+    bash
+    composer install
+3. *Salin File .env*
 
-## Security Vulnerabilities
+    Salin file .env.example menjadi .env:
+   
+    bash
+    cp .env.example .env
+    
+5. **Generate Application Key**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    Jalankan perintah berikut untuk menghasilkan application key:
+    
+    bash
+    php artisan key:generate
 
-## License
+6. *Migrasi Database*
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    Jalankan migrasi untuk membuat tabel di database:
+    
+    bash
+    php artisan migrate:fresh
+
+7. **Migrasi Seeder**
+
+    Jalankan migrasi untuk mengisi tabel di database:
+   
+   bash
+    php artisan db:seed --class=AdminSeeder
+
+8. *Running Applications*
+
+    Jalankan server pengembangan lokal:
+
+   ```bash
+   php artisan serve
+
+9. Login Administrator:
+    - Email: admin@gmail.com
+    - Password: admin123
+
+Note: 
+- Replace [DB_DATABASE] with actual database name where you import the database.
+
+
+## Contact
+
+If you have any questions, feel free to reach out to at tokonyapi@gmail.com.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[Admin]: public/assets/Admin.png
+[Home]: public/assets/User.png
