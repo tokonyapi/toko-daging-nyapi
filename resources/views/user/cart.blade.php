@@ -83,15 +83,27 @@
                         @endif
                     </div>
                         <div class="d-flex justify-content-between">
+                            @if ($totalPrice == 1)
+                            <p class="mb-2">Total price:</p>
+                            <p class="mb-2">Rp. 0</p>
+
+                            @else
                             <p class="mb-2">Total price:</p>
                             <p class="mb-2">Rp. {{ number_format($totalPrice, 0, ',', '.') }}</p>
+                            @endif
+                            
                         </div>
 
 
                         <div class="mt-3">
+                            @if ($totalPrice == 1)
+
+                            @else
                             <button class="btn btn-warning text-white w-100 my-auto" id="pay-button">
                                 Check Out <i class="bi bi-caret-right-fill"></i>
                             </button>
+                            @endif
+                            
                             <a href="{{ route('user.dashboard') }}" class="btn btn-light w-100 border mt-2">Kembali</a>
                         </div>
                     </div>
