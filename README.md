@@ -2,8 +2,8 @@
 
 ## Documentation
 
-<img src="/assets/admin.png" alt="Admin" style="border: 1px solid black;"/>
-<img src="/assets/user.png" alt="Home" style="border: 1px solid black;"/>
+<img src="public/assets/admin.png" alt="Admin" style="border: 1px solid black;"/>
+<img src="public/assets/user.png" alt="User" style="border: 1px solid black;"/>
 
 ## About
 
@@ -119,5 +119,5 @@ If you have any questions, feel free to reach out to at tokonyapi@gmail.com.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[Admin]: /assets/Admin.png
-[Home]: /assets/User.png
+[Admin]: public/assets/Admin.png
+[Home]: public/assets/User.png
