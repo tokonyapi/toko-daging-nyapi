@@ -12,6 +12,7 @@
             <h1 class="display-5 fw-bolder">{{ $product->name }}</h1>
             <div class="fs-5 mb-5">
               <span>Rp. {{ number_format($product->price, 0, ',', '.') }}</span>
+              <p>Berat : {{ number_format($product->berat, 0, ',', '.') }} g</p>
               <p>Stock: {{ $product->stock }}</p>
             </div>
             <p class="lead">
