@@ -5,7 +5,7 @@
         data-client-key="SB-Mid-client-jb569I_5pzmhsGaD"></script>
 
 <section class="bg-light my-5">
-    <div class="container vh-100">
+    <div class="container">
         <div class="row">
             <h4 class="card-title mb-4">Your shopping cart</h4>
             <div class="col-lg-9">
@@ -22,7 +22,6 @@
                                                 <img src="{{ asset('img-product/' . $cart->product->image) }}" class="border rounded me-3 w-50" alt="{{ $cart->product->name }}">
                                                 <div class="">
                                                     <a href="{{ $cart->product->slug }}" class="nav-link text-black">{{ $cart->product->name }}</a>
-                                                    <p class="text-muted">{{ $cart->product->description }}</p>
                                                 </div>
                                             </div>
                                         </div>
